@@ -19,22 +19,26 @@ Configure your local DNS file to include two domains (on Linux/Mac it should be 
 127.0.0.1 spice-datahub.local
 127.0.0.1 spice-apif.local
 ```
-
-## Start / Stop
-To start the containers (including configuring the internal network and proxy):
+To run the images and create the containers (only one time):
 ```
-./start.sh
+./run-all.sh
 ```
 The web portal can be accessed at `http://spice-datahub.local`
 
 The JSON-lD API can be accessed at `http://spice-apif.local` 
 
+## Stop / Restart
+
 To stop all containers:
 ```
-./stop.sh
+./stop-all.sh
+```
+To start the containers (including configuring the internal network and proxy):
+```
+./start-all.sh
 ```
 
-## Build the images
+## Building the images
 Don't do that unless you know what you're doing.
 ```
 cd mongodb && ./build.sh v0.6.7 && cd ..
