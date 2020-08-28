@@ -4,4 +4,6 @@ docker network connect spice-datahub spice-datahub-mysql
 docker network connect spice-datahub spice-datahub-webserver
 docker network connect spice-datahub spice-datahub-mongodb
 docker network connect spice-datahub spice-datahub-apif
+docker network connect spice-datahub spice-datahub-proxy
 docker network inspect spice-datahub
+
