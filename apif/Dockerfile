@@ -1,5 +1,6 @@
 FROM php:7.2-apache
-ARG APIF_VERSION=v0.6.9
+ARG APIF_VERSION
+RUN test -n "$APIF_VERSION"
 # File Author / Maintainer
 MAINTAINER enridaga
 LABEL version="$APIF_VERSION"
