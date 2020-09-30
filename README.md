@@ -34,7 +34,7 @@ return [
     'mkdf-stream'   =>  [
             'user'  =>  'datahub-admin',
             'pass'  =>  'DATAHUB1234567890',
-            'server-url'    =>  'http://spice-apif-service',
+            'server-url'    =>  'http://spice-datahub-apif',
             'public-url'    =>  'https://spice-apif.local'
         ],
         'mkdf-file' => [
