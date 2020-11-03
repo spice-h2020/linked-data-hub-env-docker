@@ -3,17 +3,49 @@ Development environment for the SPICE Linked Data Hub
 
 This project includes instructions to build docker images for developing the SPICE Linked Data Hub.
 
-Four containers:
+Seven containers:
 
 - spice-datahub-webserver: the Apache+PHP7.2 environment for running the LDH
 - spice-datahub-apif: middleware of the document server
 - spice-datahub-mysql: the MySQL database server used by the LDH
 - spice-datahub-mongodb: database server for managing JSON-LD documents
 - spice-datahub-proxy: gateway and virtual hosts (relyiing on `https://github.com/nginx-proxy`)
+- spice-datahub-rdfpublisher
+- spice-datahub-blazegraph
 
 You need to clone the repository but you don't need to build the images unless you want to change them.
 
 ## Setup
+Clone the linked-data-hub repository in ~/spice-datahub, then:
+```
+cd ~/spice-datahub
+composer install
+```
+
+Create the config file in `~/spice-datahub/config/autoload/local.php`, by coping `locap.php.dist` and editing as follows:
+```
+return [
+    'db'    => [
+            'host'     => 'spice-datahub-mysql',
+            'port'     => '3306',
+            'user'     => 'root',
+            'password' => 'NMg17ruPknQSC2rF',
+            'dbname'   => 'spice_datahub',
+            'charset'  => 'utf8mb4'
+        ],
+    'mkdf-stream'   =>  [
+            'user'  =>  'datahub-admin',
+            'pass'  =>  'DATAHUB1234567890',
+            'server-url'    =>  'http://spice-datahub-apif',
+            'public-url'    =>  'https://spice-apif.local'
+        ],
+        'mkdf-file' => [
+            'destination' => '/var/www/spice-datahub/data/files'
+        ]
+];
+```
+(passowrds in the example match the ones configured in the various containers, you can change if you wish).
+
 Configure your local DNS file to include two domains (on Linux/Mac it should be `/etc/hosts`:
 ```
 127.0.0.1 spice-datahub.local
