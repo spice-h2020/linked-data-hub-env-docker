@@ -3,13 +3,15 @@ Development environment for the SPICE Linked Data Hub
 
 This project includes instructions to build docker images for developing the SPICE Linked Data Hub.
 
-Four containers:
+Seven containers:
 
 - spice-datahub-webserver: the Apache+PHP7.2 environment for running the LDH
 - spice-datahub-apif: middleware of the document server
 - spice-datahub-mysql: the MySQL database server used by the LDH
 - spice-datahub-mongodb: database server for managing JSON-LD documents
 - spice-datahub-proxy: gateway and virtual hosts (relyiing on `https://github.com/nginx-proxy`)
+- spice-datahub-rdfpublisher: the component aimed at transformming data into RDF and uploading RDF triples to the blazegrpah store
+- spice-datahub-blazegraph: the quadstore used by the rdfpublisher
 
 You need to clone the repository but you don't need to build the images unless you want to change them.
 
