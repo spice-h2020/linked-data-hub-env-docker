@@ -1,8 +1,8 @@
-FROM php:7.2-apache
+FROM php:7.3-apache
 
 # File Author / Maintainer
 MAINTAINER enridaga
-LABEL version="0.1.1"
+LABEL version="0.2"
 LABEL description="SPICE Datahub Webserver image."
 
 COPY 000-Default.conf /etc/apache2/sites-enabled/000-Default.conf
