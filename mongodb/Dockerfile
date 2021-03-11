@@ -2,7 +2,7 @@ FROM mongo:latest
 
 # File Author / Maintainer
 MAINTAINER enridaga
-LABEL version="0.1.1"
+LABEL version="0.2"
 LABEL description="MKDF API Factory image with Dockerfile."
 
 ENV MONGO_INITDB_ROOT_USERNAME admin
