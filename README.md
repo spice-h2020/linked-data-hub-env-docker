@@ -78,3 +78,5 @@ cd apif && ./build.sh v0.6.7 && cd ..
 cd webserver && ./build.sh && cd ..
 
 ```
+
+Default credentials are admin@example.org:password
