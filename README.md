@@ -42,9 +42,6 @@ return [
         'mkdf-file' => [
             'destination' => '/var/www/spice-datahub/data/files'
         ],
-    'mkdf-file' => [
-            'destination' => 'data/',
-        ],
     'mkdf-sparql'   => [
         'rdfjobs-dataset' =>    'spice_rdfjobs',
         'rdfjobs-key' =>        'RDFJOBS1234567890'
