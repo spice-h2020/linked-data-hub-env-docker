@@ -41,7 +41,14 @@ return [
         ],
         'mkdf-file' => [
             'destination' => '/var/www/spice-datahub/data/files'
-        ]
+        ],
+    'mkdf-file' => [
+            'destination' => 'data/',
+        ],
+    'mkdf-sparql'   => [
+        'rdfjobs-dataset' =>    'dataset',
+        'rdfjobs-key' =>        'key'
+    ],
 ];
 ```
 (passowrds in the example match the ones configured in the various containers, you can change if you wish).
