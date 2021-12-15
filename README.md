@@ -46,8 +46,8 @@ return [
             'destination' => 'data/',
         ],
     'mkdf-sparql'   => [
-        'rdfjobs-dataset' =>    'dataset',
-        'rdfjobs-key' =>        'key'
+        'rdfjobs-dataset' =>    'spice_rdfjobs',
+        'rdfjobs-key' =>        'RDFJOBS1234567890'
     ],
 ];
 ```
