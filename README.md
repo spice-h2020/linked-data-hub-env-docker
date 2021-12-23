@@ -18,7 +18,7 @@ You need to clone the repository but you don't need to build the images unless y
 ## Setup
 Clone the linked-data-hub repository in ~/spice-datahub, then enter the `spice-datahub-webserver` container and:
 ```
-cd /user/www/spice-datahub
+cd /usr/www/spice-datahub
 composer install 
 ```
 
