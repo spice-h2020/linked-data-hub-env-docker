@@ -16,10 +16,10 @@ Seven containers:
 You need to clone the repository but you don't need to build the images unless you want to change them.
 
 ## Setup
-Clone the linked-data-hub repository in ~/spice-datahub, then:
+Clone the linked-data-hub repository in ~/spice-datahub, then enter the `spice-datahub-webserver` container and:
 ```
-cd ~/spice-datahub
-composer install
+cd /user/www/spice-datahub
+composer install 
 ```
 
 Create the config file in `~/spice-datahub/config/autoload/local.php`, by coping `locap.php.dist` and editing as follows:
