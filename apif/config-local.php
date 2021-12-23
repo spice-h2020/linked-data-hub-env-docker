@@ -9,11 +9,15 @@ return [
         'adminUser' => 'datahub-admin',
         'adminPwd' => 'DATAHUB1234567890'
     ],
-    //Specify the dataset and key used for activity logging here
-    'metadata' => [
+    'file' => [
+        'destination' => 'data/filestore/',
+        'metadata_dataset' => 'metadata-dataset'
+    ],
+	'metadata' => [
         'dataset' => 'metadata-dataset'
     ],
-    'activityLog' => [
+    //Specify the dataset and key used for activity logging here
+	'activityLog' => [
         'enabled' => true,
         'dataset' => 'activity_log-dataset'
     ],
@@ -21,4 +25,9 @@ return [
         'dataset' => 'schema-dataset',
     ],
 
+    'sparql' => [
+        'host' => 'spice-datahub-blazegraph',
+        'port' => '9999',
+        'namespacePrefix' => ''
+    ],
 ];
